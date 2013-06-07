@@ -4,7 +4,7 @@ var APP = (function(ns){
 
     var clientId = '286510454109.apps.googleusercontent.com';
     var apiKey = 'AIzaSyDdVFVyVuF5ecaOYpOYMy6jt2bK83qQj-c';
-    var scopes = 'https://www.googleapis.com/auth/plus.me';
+    var scopes = ['https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/plus.login'];
 
     function handleAuthResult(authResult) {
       var authorizeButton = document.getElementById('authorize-button');

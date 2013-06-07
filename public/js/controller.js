@@ -11,7 +11,19 @@ var APP = (function(ns){
 		};
 
 		this.findMe = function(){
-	        _plus.load();
+	        _plus.findMe();
+		}
+
+		this.findPublicActivities = function(){
+			_plus.findPublicActivities();
+		}
+
+		this.findPublicProfiles = function(){
+			_plus.findPublicProfiles();
+		}
+
+		this.getProfile = function(profileId){
+			_plus.getProfile(profileId);
 		}
 	};
 

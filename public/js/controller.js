@@ -2,9 +2,10 @@ var APP = (function(ns){
 	ns = ns || {};
 	ns.controller = ns.controller || {};
 
-	ns.controller.AppController = function(aAuthorizer, aPlus){
+	ns.controller.AppController = function(aAuthorizer, aApis){
 		var _authorizer = aAuthorizer;
-		var _plus = aPlus;
+		var _plus = aApis.plus;
+		var _calendar = aApis.calendar;
 
 		this.start = function(){
 	        _authorizer.handleClientLoad();
@@ -12,7 +13,11 @@ var APP = (function(ns){
 
 		this.findMe = function(){
 	        _plus.load();
-		}
+		};
+
+    this.getEvents = function({
+      _calendar.getEvents();
+    })
 	};
 
 	return ns;

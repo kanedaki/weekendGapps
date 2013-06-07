@@ -11,6 +11,10 @@
 	        <p class="lead">Create a javascript application using Google APIs.</p>
 <!--	        <a href="#myModal" role="button" class="btn btn-large btn-success" data-toggle="modal">Get started</a>-->
 	      </div>
+        <button id="authorize-button" style="visibility: hidden" class="btn">Authorize</button>
+        <button id="find-me" class="btn" onclick="controller.findMe();">Find me</button>
+        <div id="content"></div>
+    
 
 	  <%= yield %>
 	  <%= erb :footer %>

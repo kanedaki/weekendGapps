@@ -8,5 +8,8 @@ class Web < Sinatra::Base
   get '/' do
     erb :index , :layout => :home_layout
   end
+  get '/calendar' do
+    erb :calendar, :layout => :home_layout
+  end
 
 end

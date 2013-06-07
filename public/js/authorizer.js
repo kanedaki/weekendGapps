@@ -2,7 +2,7 @@ var APP = (function(ns){
 
 	ns = ns || {};
 
-    var clientId = '824492178258.apps.googleusercontent.com';
+    var clientId = '824492178258-2993rb0f7al8frpvv6mqqr6h3ju5t06n.apps.googleusercontent.com';
     var apiKey = 'AIzaSyBXwb6TlkYh1Qmt9x9leGywlSwVgaultlQ';
     var scopes = 'https://www.googleapis.com/auth/calendar';
 

@@ -1,9 +1,13 @@
 var APP = (function(ns){
-	ns ||= {};
+	ns = ns || {};
 	ns.apis = ns.apis || {};
 
 	ns.apis.Calendar = function(){
-		this.load = function(){
+
+    this.bindEvents = function(){
+      $('#getEvents').click(_.bind(this.getEvents, this));
+    };
+		this.getEvents = function(){
 			gapi.client.load('calendar', 'v3', function() {
 				// Step 5: Assemble the API request
 				var request = gapi.client.calendar.calendarList.list({
@@ -19,4 +23,5 @@ var APP = (function(ns){
 
 	};
 
+	return ns;
 })(APP);

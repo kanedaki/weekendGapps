@@ -6,6 +6,7 @@ var APP = (function(ns){
 		var _authorizer = aAuthorizer;
 		var _plus = aApis.plus;
 		var _calendar = aApis.calendar;
+		_calendar.bindEvents();
 
 		this.start = function(){
 	        _authorizer.handleClientLoad();
@@ -15,9 +16,9 @@ var APP = (function(ns){
 	        _plus.load();
 		};
 
-    this.getEvents = function({
+    this.getEvents = function(){
       _calendar.getEvents();
-    })
+    }
 	};
 
 	return ns;

@@ -16,4 +16,8 @@ class Web < Sinatra::Base
     erb :manifest, :layout => false
   end
 
+  get '/plus' do
+    erb :plus, :layout => :home_layout
+  end
+
 end

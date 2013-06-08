@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ApplicationManifest xmlns="http://schemas.google.com/ApplicationManifest/2009">
+  <Name>Weekend Gapps</Name>
+  <Description>Trasteando con las apis un sabado cualquiera</Description>
+
+  <!-- Administrators and users will be sent to this URL for application support -->
+  <Support>
+    <Link rel="support" href="http://weekendgapps.herokuapp.com/" />
+  </Support>
+
+  <!-- Show this link in Google's universal navigation for all users -->
+  <Extension id="navLink" type="link">
+    <Name>Weekend Gapps</Name>
+    <Url>http://weekendgapps.herokuapp.com//openid_identifier=${DOMAIN_NAME}</Url>
+    <Scope ref="calendarAPI, plusAPI"/>
+  </Extension>
+
+  <!-- Declare our OpenID realm so our app is white listed -->
+  <Extension id="realm" type="openIdRealm">
+    <Url>http://weekendgapps.herokuapp.com/</Url>
+  </Extension>
+
+  <!-- Need access to the Calendar API -->
+  <Scope id="calendarAPI">
+    <Url>https://www.google.com/calendar/feeds/</Url>
+    <Reason>Esta app crea nuevos eventos para weekends</Reason>
+  </Scope>
+  <Scope id="plusAPI">
+    <Url>https://www.googleapis.com/auth/plus.login</Url>
+    <Reason>Esta app trae info de google plus</Reason>
+  </Scope>
+</ApplicationManifest>

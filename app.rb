@@ -11,5 +11,9 @@ class Web < Sinatra::Base
   get '/calendar' do
     erb :calendar, :layout => :home_layout
   end
+  get '/manifest' do
+    content_type 'text/xml'
+    erb :manifest, :layout => false
+  end
 
 end

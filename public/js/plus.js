@@ -36,17 +36,22 @@ var APP = (function(ns){
 					'collection': 'public'
 				});
 				request.execute(function(resp) {
-					var heading = $("<h4></h4>");
-					heading.append("Actividades públicas:");
-					var lista = $("<ul></ul>");
-					heading.append(lista)
-					for(var i = 0; i < resp.result.items.length; i++){
-						var li = $("<li></li>");
-						lista.append(li);
-						li.append(resp.result.items[i].title);
-					};
-					$('#content').html('');
-					$('#content').append(heading);
+					if(resp.result.items){
+						var heading = $("<h4></h4>");
+						heading.append("Actividades públicas:");
+						var lista = $("<ul></ul>");
+						heading.append(lista)
+						for(var i = 0; i < resp.result.items.length; i++){
+							var li = $("<li></li>");
+							lista.append(li);
+							li.append(resp.result.items[i].title);
+						};
+						$('#content').html('');
+						$('#content').append(heading);
+					}else{
+						$('#content').html('<div class="alert alert-error">No tienes Actividades disponibles</div>');
+					}
+					
 				});
 			});
 		};
@@ -58,20 +63,20 @@ var APP = (function(ns){
 					'collection': 'visible'
 				});
 				request.execute(function(resp) {
-					var heading = $("<h4></h4>");
-					heading.append("Perfiles públicas:");
-					var lista = $("<ul></ul>");
-					heading.append(lista)
+					var heading = $("<h4>Perfiles públicos:</h4>");
+					var table = $("<table class='table table-striped'></table>");					
 					for(var i = 0; i < resp.result.items.length; i++){
-						var li = $("<li></li>");
-						lista.append(li);
-						li.append(resp.result.items[i].displayName);
+						var tr = $("<tr></tr>");
+						table.append(tr);
+						var td = $("<td></td>");
+						td.append(resp.result.items[i].displayName);
 						var profileId = "" + resp.result.items[i].id;
-						var onclick = "controller.getProfile('" + profileId + "')";
-						li.append('<button onclick="' + onclick + '">Completo</button>');
+						var btnCompleto = "controller.getProfile('" + profileId + "')";
+						td.append('<button class="btn btn-small pull-right" onclick="' + btnCompleto + '">Completo</button>');
+						tr.append(td);
 					};
 					$('#content').html('');
-					$('#content').append(heading);
+					$('#content').append(heading, table);
 				});
 			});
 		};

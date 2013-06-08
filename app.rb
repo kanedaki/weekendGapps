@@ -16,4 +16,8 @@ class Web < Sinatra::Base
     erb :plus, :layout => :home_layout
   end
 
+  get '/books' do
+    erb :books, :layout => :home_layout
+  end
+  
 end

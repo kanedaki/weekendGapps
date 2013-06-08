@@ -2,16 +2,16 @@ var APP = (function(ns){
 
 	ns = ns || {};
 
-    var clientId = '286510454109.apps.googleusercontent.com';
-    var apiKey = 'AIzaSyDdVFVyVuF5ecaOYpOYMy6jt2bK83qQj-c';
-    var scopes = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/plus.me', 'https://www.googleapis.com/auth/plus.login'];
+    var clientId = '125777739209.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyDUW0w3lmpseIf4nt4MGZcea0Sh8uTE4Bw';
+    var scopes = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/plus.me', 'https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/books'];
 
     function handleAuthResult(authResult) {
       var authorizeButton = document.getElementById('authorize-button');
       if (authResult && !authResult.error) {
-        authorizeButton.style.visibility = 'hidden';
+        authorizeButton.style.display = 'none';
       } else {
-        authorizeButton.style.visibility = '';
+        authorizeButton.style.display = 'block';
         authorizeButton.onclick = handleAuthClick;
       }
     }

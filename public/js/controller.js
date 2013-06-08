@@ -5,8 +5,9 @@ var APP = (function(ns){
 	ns.controller.AppController = function(aAuthorizer, aApis){
 		var _authorizer = aAuthorizer;
 		var _plus = aApis.plus;
+		var _books = aApis.books;
 		var _calendar = aApis.calendar;
-		_calendar.bindEvents();
+			_calendar.bindEvents();
 
 		this.start = function(){
 	        _authorizer.handleClientLoad();
@@ -28,9 +29,13 @@ var APP = (function(ns){
 			_plus.getProfile(profileId);
 		};
 
+		this.getBooks = function(){
+    	  _books.getBooks();
+    	};
+    	
 	    this.getEvents = function(){
     	  _calendar.getEvents();
-    	};
+    	};    	
 	};
 
 	return ns;

@@ -82,6 +82,15 @@ var APP = (function(ns){
 					'userId': profileId
 				});
 				request.execute(function(resp) {
+					var gender = resp.gender;
+					var image = resp.image;
+					var heading = document.createElement('h4');
+					var img = document.createElement('img');
+					img.src = image.url;
+					heading.appendChild(img);
+					heading.appendChild(document.createTextNode(gender));
+					$('#content').html('');
+					$('#content').append(heading);
 				});
 			});
 		};

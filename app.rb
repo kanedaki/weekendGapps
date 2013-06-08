@@ -12,4 +12,8 @@ class Web < Sinatra::Base
     erb :calendar, :layout => :home_layout
   end
 
+  get '/plus' do
+    erb :plus, :layout => :home_layout
+  end
+
 end

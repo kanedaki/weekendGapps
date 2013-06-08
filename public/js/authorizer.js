@@ -2,9 +2,9 @@ var APP = (function(ns){
 
 	ns = ns || {};
 
-    var clientId = '824492178258-2993rb0f7al8frpvv6mqqr6h3ju5t06n.apps.googleusercontent.com';
-    var apiKey = 'AIzaSyBXwb6TlkYh1Qmt9x9leGywlSwVgaultlQ';
-    var scopes = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/plus.login'];
+    var clientId = '286510454109.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyDdVFVyVuF5ecaOYpOYMy6jt2bK83qQj-c';
+    var scopes = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/plus.me', 'https://www.googleapis.com/auth/plus.login'];
 
     function handleAuthResult(authResult) {
       var authorizeButton = document.getElementById('authorize-button');

@@ -9,11 +9,13 @@ var APP = (function(ns){
       $('.start-date').datetimepicker({dateFormat: "yy-mm-dd",timeFormat: "HH:mm:ss"})
       $('.end-date').datetimepicker({dateFormat: "yy-mm-dd",timeFormat: "HH:mm:ss"})
     };
+
 		this.getEvents = function(){
 			gapi.client.load('calendar', 'v3', function() {
 				// Step 5: Assemble the API request
         startDate = $('.start-date').val().replace(' ', 'T')
         endDate = $('.end-date').val().replace(' ', 'T')
+        
 				var request = gapi.client.calendar.events.insert({
           "calendarId": 'primary',
           "resource": {

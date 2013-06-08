@@ -2,8 +2,8 @@ var APP = (function(ns){
 
 	ns = ns || {};
 
-    var clientId = '286510454109.apps.googleusercontent.com';
-    var apiKey = 'AIzaSyDdVFVyVuF5ecaOYpOYMy6jt2bK83qQj-c';
+    var clientId = '308389124108.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyBYWcRkkDKj-uAPCLUwvCpfggqcoK_ud2E';
     var scopes = ['https://www.googleapis.com/auth/calendar', 'https://www.googleapis.com/auth/plus.me', 'https://www.googleapis.com/auth/plus.login'];
 
     function handleAuthResult(authResult) {

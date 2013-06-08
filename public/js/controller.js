@@ -6,6 +6,9 @@ var APP = (function(ns){
 		var _authorizer = aAuthorizer;
 		var _plus = aApis.plus;
 		var _calendar = aApis.calendar;
+		var _maps = aApis.eventMap;
+
+		_maps.bindEvents();
 		_calendar.bindEvents();
 
 		this.start = function(){

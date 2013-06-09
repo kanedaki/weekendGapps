@@ -32,7 +32,11 @@ var APP = (function(ns){
 		this.getBooks = function(){
     	  _books.getBooks();
     	};
-    	
+
+    	this.searchBooks = function(query){
+    	  _books.searchBooks(query);
+    	};
+
 	    this.getEvents = function(){
     	  _calendar.getEvents();
     	};    	

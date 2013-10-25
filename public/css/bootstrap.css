@@ -5772,3 +5772,10 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
+/*=========================
+  Personal Styles
+  ========================*/
+  .book {
+    height:310px;
+    overflow: hidden;
+  }

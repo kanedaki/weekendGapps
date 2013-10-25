@@ -32,9 +32,9 @@ var APP = (function(ns){
 				});
 				// Step 6: Execute the API request
 				request.execute(function(resp) {
-          console.log(resp)
+          //console.log(resp)
           if (resp.status == "confirmed") {
-            $('.result').html("<a href='"+ resp.htmlLink + "'>Link al evento</a>");
+            $('.result').html("<a href='"+ resp.htmlLink + "' target='_blank'>Link al evento</a>");
           }
           else {
             $('.result').html("<p>Ha habido un error en la publicacion del evento</p>")
